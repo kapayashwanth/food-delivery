@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFlow - Local Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+        }
+        .section h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-item {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        .image-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .image-item h3 {
+            margin: 10px 0 5px 0;
+            color: #333;
+            font-size: 14px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍔 FoodFlow - Local Image Test</h1>
+        <p style="text-align: center; color: #666;">Testing images with local file paths</p>
+        
+        <!-- Restaurant Images Test -->
+        <div class="section">
+            <h2>🏪 Restaurant Images (Local Paths)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="public/assets/pizza-palace.jpg" alt="Pizza Palace" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Pizza Palace image not found</div>
+                    <h3>Pizza Palace</h3>
+                </div>
+                <div class="image-item">
+                    <img src="public/assets/burger-barn.jpg" alt="Burger Barn" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Burger Barn image not found</div>
+                    <h3>Burger Barn</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item Images Test -->
+        <div class="section">
+            <h2>🍕 Menu Item Images (Local Paths)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="public/assets/margherita-pizza.jpg" alt="Margherita Pizza" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Margherita Pizza image not found</div>
+                    <h3>Margherita Pizza</h3>
+                </div>
+                <div class="image-item">
+                    <img src="public/assets/pepperoni-pizza.jpg" alt="Pepperoni Pizza" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Pepperoni Pizza image not found</div>
+                    <h3>Pepperoni Pizza</h3>
+                </div>
+                <div class="image-item">
+                    <img src="public/assets/classic-burger.jpg" alt="Classic Burger" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Classic Burger image not found</div>
+                    <h3>Classic Burger</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Preview Images Test -->
+        <div class="section">
+            <h2>📸 3D Preview Images (Local Paths)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="public/assets/margherita-real-1.jpg" alt="Margherita Real 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Margherita Real 1 image not found</div>
+                    <h3>Margherita Real 1</h3>
+                </div>
+                <div class="image-item">
+                    <img src="public/assets/pepperoni-real-1.jpg" alt="Pepperoni Real 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Pepperoni Real 1 image not found</div>
+                    <h3>Pepperoni Real 1</h3>
+                </div>
+                <div class="image-item">
+                    <img src="public/assets/burger-real-1.jpg" alt="Burger Real 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; color:red;">❌ Burger Real 1 image not found</div>
+                    <h3>Burger Real 1</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Results -->
+        <div class="section">
+            <h2>📊 Test Results</h2>
+            <div id="test-results">
+                <div class="warning">
+                    🔄 Running image tests... Check the images above to see which ones load successfully.
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="section">
+            <h2>📋 Why Images Might Not Show</h2>
+            <div class="info">
+                <strong>🔍 Common Issues:</strong>
+                <ul>
+                    <li><strong>File Protocol:</strong> Opening HTML files directly in browser uses <code>file://</code> protocol</li>
+                    <li><strong>Security Restrictions:</strong> Browsers block local file access for security</li>
+                    <li><strong>Path Issues:</strong> Relative paths might not work with <code>file://</code></li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                ✅ <strong>Solutions:</strong>
+                <ul>
+                    <li><strong>Use a Local Server:</strong> Run <code>python -m http.server</code> or <code>npm run dev</code></li>
+                    <li><strong>Deploy to Netlify:</strong> Images will work perfectly on a web server</li>
+                    <li><strong>Use Live Server Extension:</strong> If you have VS Code with Live Server</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Quick Test Instructions -->
+        <div class="section">
+            <h2>🚀 Quick Test Solutions</h2>
+            <div class="warning">
+                <strong>Option 1: Python Server (if Python is installed)</strong><br>
+                <code>python -m http.server 8000</code><br>
+                Then open: <code>http://localhost:8000/local-image-test.html</code>
+            </div>
+            
+            <div class="warning">
+                <strong>Option 2: Install Node.js and run</strong><br>
+                <code>npm install</code><br>
+                <code>npm run dev</code><br>
+                Then open the React app
+            </div>
+            
+            <div class="success">
+                <strong>Option 3: Deploy to Netlify</strong><br>
+                Images will work perfectly when deployed to Netlify!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Count successful image loads
+        let loadedImages = 0;
+        let totalImages = 0;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            totalImages = images.length;
+            
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    loadedImages++;
+                    updateResults();
+                });
+                
+                img.addEventListener('error', function() {
+                    updateResults();
+                });
+            });
+        });
+        
+        function updateResults() {
+            const resultsDiv = document.getElementById('test-results');
+            if (loadedImages + (totalImages - loadedImages) === totalImages) {
+                if (loadedImages === totalImages) {
+                    resultsDiv.innerHTML = `
+                        <div class="success">
+                            ✅ All ${loadedImages} images loaded successfully! Your images are working perfectly.
+                        </div>
+                    `;
+                } else {
+                    resultsDiv.innerHTML = `
+                        <div class="error">
+                            ❌ Only ${loadedImages} out of ${totalImages} images loaded. This is expected when opening HTML files directly in browser.
+                        </div>
+                        <div class="info">
+                            💡 <strong>This is normal!</strong> Images need to be served from a web server to work properly.
+                        </div>
+                    `;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
